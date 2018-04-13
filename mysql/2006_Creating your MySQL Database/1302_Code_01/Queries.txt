@@ -1,0 +1,18 @@
+/* displays the maximum number of cars of a single model sold by each vendor in January 2006 /*
+SELECT salesperson, max(qty_2006_01) 
+FROM sales 
+GROUP BY salesperson 
+
+
+/* finds the average number of cars sold by our sales force taken as a whole, in February 2006 */
+SELECT avg(qty_2006_02)
+FROM sales
+WHERE qty_2006_02 > 0
+
+
+/* finds for which model more than three cars were sold in January */
+SELECT model_name_year, SUM(qty_2006_01)
+FROM sales
+GROUP BY model_name_year
+HAVING SUM(qty_2006_01) > 3
+

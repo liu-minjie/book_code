@@ -1,0 +1,14 @@
+CREATE TABLE sales (
+  salesperson char(40) NOT NULL,
+  brand char(40) NOT NULL,
+  model_number char(40) NOT NULL,
+  model_name_year char(40) NOT NULL,
+  qty_2006_01 int(11) NOT NULL,
+  qty_2006_02 int(11) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+
+INSERT INTO sales VALUES ('Murray, Dan', 'Fontax', '1A8', 'Mitsou 2007', 3, 4);
+INSERT INTO sales VALUES ('Murray, Dan', 'Fontax', '2X12', 'Wanderer 2006', 7, 0);
+INSERT INTO sales VALUES ('Smith, Peter', 'Licorne', 'LKC', 'Gazelle 2007', 1, 6);
+INSERT INTO sales VALUES ('Smith, Peter', 'Fontax', '1A8', 'Mitsou 2007', 1, 0);
